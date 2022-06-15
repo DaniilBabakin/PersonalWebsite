@@ -1,18 +1,25 @@
-import React, { lazy, Suspense, useEffect, useRef } from "react";
-import Header from "./components/header/header";
-import Projects from "./components/projects/projects";
+import React, { lazy, Suspense } from "react"
+import Header from "./components/header/header"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import * as ROUTES from "./constants/routes"
+import { AnimatePresence } from "framer-motion"
 
-import Main from "./pages/main";
-
+const Main = lazy(() => import("./pages/main"))
+const InstagramClone = lazy(() => import("./pages/instagramClonePage"))
 
 function App() {
-  const scrollbar = useRef(null);
-  return (  
-    <div className="App">
-        <Main/>
-        <Projects/>
-    </div>
-  );
+  return (
+    <Router>
+      <Suspense fallback={<p>Loading...</p>}>
+      <AnimatePresence initial={true} exitBeforeEnter>
+        <Routes>
+          <Route path={ROUTES.MAIN} element={<Main />} />
+          <Route path={ROUTES.INSTAGRAMCLONE} element={<InstagramClone />} />
+        </Routes>
+        </AnimatePresence>
+      </Suspense>
+    </Router>
+  )
 }
 
-export default App;
+export default App

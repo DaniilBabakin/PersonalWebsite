@@ -4,12 +4,14 @@ import {
   useViewportScroll,
   useTransform,
   useMotionValue,
+  useSpring,
 } from "framer-motion"
 import { useWindowSize } from "../../hooks/useWindowSize"
-import ProgressiveImage from "react-progressive-image"
+import { InstagramClone } from "./projectsCards/instagramClone"
+import { Scrollbar } from "smooth-scrollbar-react"
+import { OpticaVzor } from "./projectsCards/opticaVzor"
 
 export default function Projects() {
-  const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }
   const size = useWindowSize()
   const scrollStart = size.height * 0.5
   const scrollAmount = size.height > 900 ? size.height : size.height * 0.8
@@ -19,63 +21,39 @@ export default function Projects() {
     [scrollStart, scrollAmount],
     ["blur(15px)", "blur(0px)"]
   )
-
-  const topBottomLine = {
-    initial: {
-      height:"0"
-    },
-    hover: {
-      height:"2rem"
-    },
-  }
-  const rightLeftLine = {
-    initial: {
-      width:"0"
-    },
-    hover: {
-      width:"2rem"
-    },
-  }
-  const stackText = {
-    initial: {
-      opacity:0
-    },
-    hover: {
-      opacity:1
-    },
-  }
   const opacity = useTransform(scrollY, [scrollStart, scrollAmount], [0, 1])
+
+  const scrollContainer = document.querySelector(`.projects__container`);
+  const body = document.body
+  console.log(scrollContainer)
+  scrollContainer && scrollContainer.addEventListener(`wheel`, (evt) => {
+    evt.preventDefault();
+    
+    //check if you are at the end of horizontal scroll here
+    if (
+      scrollContainer.scrollWidth - scrollContainer.clientWidth ===
+      scrollContainer.scrollLeft &&
+      Math.sign(evt.deltaY) === 1
+    ) {
+      body.scrollTop += evt.deltaY;
+      return;
+    }
+  
+    //Horizontal scroll code here
+    scrollContainer.scrollLeft += evt.deltaY;
+  
+  });
 
   return (
     <>
-    <motion.div className="projects" style={{ filter, opacity }}>
-      <div className="projects__container">
+      <motion.div className="projects" style={{ filter, opacity }}>
         <motion.h1 className="projects__title">PROJECTS</motion.h1>
-
-        <motion.div
-          initial="initial"
-          whileHover="hover"
-          className="project__wrapper"
-        >
-          {/* child motion component sets variants that match the keys set by the parent to animate accordingly */}
-          <motion.div
-            className="project__card"
-          />
-          <motion.div className="wrapper__line top" variants={topBottomLine} transition={transition}></motion.div>
-          <motion.div className="wrapper__line right" variants={rightLeftLine} transition={transition}></motion.div>
-          <motion.div className="wrapper__line bottom" variants={topBottomLine} transition={transition}></motion.div>
-          <motion.div className="wrapper__line left" variants={rightLeftLine} transition={transition}></motion.div>
-          <motion.div className="project__card__text" variants={stackText} transition={transition}>
-            <span>INSTAGRAM CLONE</span>
-            <span className="project__card__text__stack">
-              React/Tailwind/Firebase
-            </span>
-          </motion.div>
-        </motion.div>
-      </div>
-    </motion.div>
-
-      
+          <div className="projects__container" >
+            <InstagramClone />
+            <OpticaVzor />
+            <InstagramClone />
+          </div>
+      </motion.div>
     </>
   )
 }

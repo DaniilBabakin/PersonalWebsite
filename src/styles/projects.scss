@@ -2,13 +2,14 @@
   background-color: #ffffff;
   min-height:100vh;
   position: relative;
-  z-index:10;
-  overflow: hidden;
+  z-index:100;
+  padding:8vh 0vw 8vh 3.5vw;
 
   &__container{
-    padding:8vh 0vw 8vh 3.5vw;
+    overflow-x: scroll;
     margin: 0 auto;
     text-align: left;
+    display: flex;
   }
 
   &__title{
@@ -25,13 +26,17 @@
   }
 }
 
-//------------------------------Отдельные карточки для каждого проекта
+//------------------------------Отдельные карточки для каждого проекта--------------------------------------
 .project__wrapper{
   position: relative;
-  width: 70vw;
+  min-width: 70vw;
   height:70vh;
+  margin-left: 30px;
   transition: 0.5s ease all;
   filter:grayscale(100);
+  &:first-child{
+    margin:0;
+  }
   &:hover{
     filter:grayscale(0) contrast(105%) 
   }
@@ -63,15 +68,17 @@
     height:100%;
   }
 }
+
+
 .project__card{
   position: relative;
-  background: url('https://appleinsider.ru/wp-content/uploads/2022/02/instagram_colourful_icon_app.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  
   z-index: 0;
   height:100%;
+  &__image{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+  }
   &__text{
     position: absolute;
     z-index: 2;
