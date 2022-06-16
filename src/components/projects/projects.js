@@ -12,6 +12,7 @@ import { Scrollbar } from "smooth-scrollbar-react"
 import { OpticaVzor } from "./projectsCards/opticaVzor"
 
 export default function Projects() {
+  const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }
   const size = useWindowSize()
   const scrollStart = size.height * 0.5
   const scrollAmount = size.height > 900 ? size.height : size.height * 0.8
@@ -25,7 +26,6 @@ export default function Projects() {
 
   const scrollContainer = document.querySelector(`.projects__container`);
   const body = document.body
-  console.log(scrollContainer)
   scrollContainer && scrollContainer.addEventListener(`wheel`, (evt) => {
     evt.preventDefault();
     
@@ -46,13 +46,13 @@ export default function Projects() {
 
   return (
     <>
-      <motion.div className="projects" style={{ filter, opacity }}>
+      <motion.div className="projects" style={{ filter, opacity }} exit={{opacity:0}} transition={{duration:50,...transition}}>
         <motion.h1 className="projects__title">PROJECTS</motion.h1>
-          <div className="projects__container" >
+          <motion.div className="projects__container">
             <InstagramClone />
             <OpticaVzor />
             <InstagramClone />
-          </div>
+          </motion.div>
       </motion.div>
     </>
   )

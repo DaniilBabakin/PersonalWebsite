@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import {
   motion,
   useViewportScroll,
@@ -36,15 +36,19 @@ export const InstagramClone = () => {
       opacity: 1,
     },
   }
+
+  
   return (
     /*Этот Div - Wrapper,нам он нужен,чтобы правильно работал Hover(без него из-за изменения scale будут баги) */
     <motion.div
       initial="initial"
       whileHover="hover"
       className="project__wrapper"
+      exit={{scale:1.5}}
+      transition={{duration:5,...transition}}
     >
       {/*Сама "карточка" проекта*/}
-      <motion.div className="project__card" initial={{}} exit={{opacity:0}}>
+      <motion.div className="project__card">
       <Link to={`/projects/instagram-clone`}>
         <ProgressiveImage
           src={require("../../../assets/ic3.jpg")}
