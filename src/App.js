@@ -3,7 +3,6 @@ import Header from "./components/header/header"
 import { BrowserRouter as Router, Routes, Route,useLocation } from "react-router-dom"
 import * as ROUTES from "./constants/routes"
 import { AnimatePresence } from "framer-motion"
-import ScrollToTop from "./hooks/scrollToTop"
 
 const Main = lazy(() => import("./pages/main"))
 const InstagramClone = lazy(() => import("./pages/instagramClonePage"))

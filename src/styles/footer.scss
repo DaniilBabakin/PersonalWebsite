@@ -1,0 +1,33 @@
+.instagram__footer{
+  height:300px;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  max-width: 80vw;
+  margin:0 auto;
+  &__contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transition: 0.3s ease all;
+    &:hover{
+      transform: translateY(-5px);
+    }
+  }
+  &__suptitle{
+    color:rgb(180, 180, 180); 
+    font-size: 20px;
+    font-weight: 300;
+  }
+  &__email{
+    color:white;
+    text-decoration: none;
+    font-size: 2.5vw;
+    font-weight: bold;
+    transition: 0.3s ease all;
+    &:hover{
+      color:#c2c065
+    }
+  }
+}

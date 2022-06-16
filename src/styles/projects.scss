@@ -2,11 +2,11 @@
   background-color: #ffffff;
   min-height:100vh;
   position: relative;
-  z-index:100;
+  z-index:150;
   padding:8vh 0vw 8vh 3.5vw;
 
   &__container{
-    overflow-x: scroll;
+    
     margin: 0 auto;
     text-align: left;
     display: flex;

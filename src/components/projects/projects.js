@@ -13,6 +13,7 @@ import { OpticaVzor } from "./projectsCards/opticaVzor"
 
 export default function Projects() {
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }
+  //Отслеживание размеров окна для применения эффектов
   const size = useWindowSize()
   const scrollStart = size.height * 0.5
   const scrollAmount = size.height > 900 ? size.height : size.height * 0.8

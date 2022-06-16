@@ -3,6 +3,7 @@ import ProgressiveImage from "react-progressive-image"
 import { motion } from "framer-motion"
 import "../styles/singleProject.scss"
 import "../styles/instagramClonePage.scss"
+import { Footer } from "../components/footer/footer"
 export default function InstagramClonePage() {
   const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function InstagramClonePage() {
         {(src) => (
           <motion.img
             src={src}
-            alt="aboba"
+            alt="instagramCloneImage"
             className="single__project__image"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -97,6 +98,7 @@ export default function InstagramClonePage() {
             </span>
           </div>
         </motion.div>
+        
 
         <motion.div
           className="instagram__point"
@@ -127,12 +129,7 @@ export default function InstagramClonePage() {
           </div>
         </motion.div>
       </div>
-      <footer className="instagram__footer">
-       <div className="instagram__footer__contact">
-        <span className="instagram__footer__suptitle">Если выбирать качество</span>
-        <a href="mailto:rrdreaming@mail.ru" className="instagram__footer__email">rrdreaming@mail.ru</a>
-       </div>
-      </footer>
+      <Footer/>
     </div>
   )
 }
