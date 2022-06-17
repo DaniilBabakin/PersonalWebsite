@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Projects from '../components/projects/projects';
 import { MainSection } from '../components/mainSection';
 import { Footer } from '../components/footer/footer';
+import SkillsParralax from '../components/parralax/parralax';
 
 export default function Main(){
   
@@ -12,6 +13,7 @@ export default function Main(){
     <div>
       <MainSection/>
       <Projects/>
+      <SkillsParralax/>
       <Footer/>
     </div>
   )

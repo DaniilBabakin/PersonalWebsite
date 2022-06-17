@@ -44,11 +44,10 @@ export const InstagramClone = () => {
       initial="initial"
       whileHover="hover"
       className="project__wrapper"
-      exit={{scale:1.5}}
       transition={{duration:5,...transition}}
     >
       {/*Сама "карточка" проекта*/}
-      <motion.div className="project__card">
+      <motion.div className="project__card" initial={{y:-20}} whileInView={{y:0}} transition={{duration:5,...transition}}>
       <Link to={`/projects/instagram-clone`}>
         <ProgressiveImage
           src={require("../../../assets/ic3.jpg")}
