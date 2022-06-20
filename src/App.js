@@ -6,7 +6,6 @@ import { AnimatePresence } from "framer-motion"
 
 const Main = lazy(() => import("./pages/main"))
 const InstagramClone = lazy(() => import("./pages/instagramClonePage"))
-const Parralax = lazy(() => import("./components/parralax/parralax"))
 
 function App() {
   const location = useLocation();
@@ -16,7 +15,6 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path={ROUTES.MAIN} element={<Main />} />
           <Route path={ROUTES.INSTAGRAMCLONE} element={<InstagramClone />} />
-          <Route path={"/parralax"} element={<Parralax />} />
           
         </Routes>
         </AnimatePresence>

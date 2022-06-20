@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import "../styles/singleProject.scss"
 import "../styles/instagramClonePage.scss"
 import { Footer } from "../components/footer/footer"
-import Parallax from "../components/parralax/parralax"
 export default function InstagramClonePage() {
   const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
   useEffect(() => {

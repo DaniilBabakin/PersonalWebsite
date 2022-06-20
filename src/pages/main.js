@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Projects from '../components/projects/projects';
 import { MainSection } from '../components/mainSection';
 import { Footer } from '../components/footer/footer';
-import SkillsParralax from '../components/parralax/parralax';
+import SkillsParralax from '../components/skills/skills';
 
 export default function Main(){
   
