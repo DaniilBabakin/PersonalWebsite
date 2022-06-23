@@ -2,13 +2,10 @@ import "../../styles/projects.scss"
 import {
   motion,
   useViewportScroll,
-  useTransform,
-  useMotionValue,
-  useSpring,
+  useTransform
 } from "framer-motion"
 import { useWindowSize } from "../../hooks/useWindowSize"
 import { InstagramClone } from "./projectsCards/instagramClone"
-import { Scrollbar } from "smooth-scrollbar-react"
 import { OpticaVzor } from "./projectsCards/opticaVzor"
 
 export default function Projects() {
@@ -27,6 +24,7 @@ export default function Projects() {
 
   const scrollContainer = document.querySelector(`.projects__container`);
   const body = document.body
+  console.log(window.scrollY)
   scrollContainer && scrollContainer.addEventListener(`wheel`, (evt) => {
     evt.preventDefault();
     
@@ -36,9 +34,17 @@ export default function Projects() {
       scrollContainer.scrollLeft &&
       Math.sign(evt.deltaY) === 1
     ) {
-      body.scrollTop += evt.deltaY;
-      return;
+      console.log("Конец")
+      return window.scrollTo(0, window.scrollY + evt.deltaY/2)
     }
+    if (
+      scrollContainer.scrollLeft === 0 &&
+      Math.sign(evt.deltaY) === -1
+    ) {
+      console.log("Конец")
+      return window.scrollTo(0, window.scrollY + evt.deltaY/2)
+    }
+  
   
     //Horizontal scroll code here
     scrollContainer.scrollLeft += evt.deltaY;

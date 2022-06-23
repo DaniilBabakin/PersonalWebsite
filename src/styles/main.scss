@@ -36,6 +36,15 @@ overflow: hidden;
     text-shadow: 3px 3px 20px rgb(21 21 21 / 85%), 0 -1px 0 #f3e840, 1px 0 0 #f3e840, -1px 0 0 #f3e840, 0 1px 0 #f3e840, -20px 0 20px rgb(21 21 21 / 75%), 2px 2px 0 #f3e840, 3px 3px 0 #f3e840, 4px 4px 20px rgb(21 21 21 / 65%), 5px 5px 0 #f3e840, 4px 4px 20px rgb(21 21 21 / 50%), 4px 4px 0 #f3e840;
   }
 }
+.header__button{
+  position:fixed;
+  top:30px !important;
+  color:white;
+  transition: 0.3 ease all;
+  transform: rotate(45deg);
+}
+
+
 @media screen and (min-width: 2560px) {
   .main__text {
     line-height: 160px;
@@ -131,7 +140,7 @@ overflow: hidden;
   &::before{
     content: '';
     z-index: -100;
-    background-image: url('../../public/ui.jpg');
+    background-image: url('../../public/ui1.jpg');
     background-size: cover;
     background-position: center;
     

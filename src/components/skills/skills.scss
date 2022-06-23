@@ -64,16 +64,17 @@
     -webkit-animation:spinReverse 8s linear infinite;
     -moz-animation:spinReverse 8s linear infinite;
     animation:spinReverse 8s linear infinite;
+    position: relative;
   }
   &.second{
     animation:none;
   }
   &.third{
-    animation: none;
-    fill: rgb(97, 31, 31);
-    & svg{
-      fill:black;
-    }
+    border-radius: 15px;
+    background-position: 300px 150px;
+    background-repeat: repeat-x;
+    animation: scaleAnimation 5s linear infinite alternate;
+    
   }
   &.fourth{
     animation:none
@@ -82,7 +83,6 @@
     margin-right:0;
   }
 }
-
 
 
 
@@ -134,5 +134,17 @@
   100% { 
       -webkit-transform: rotate(-360deg); 
       transform:rotate(-360deg); 
+  } 
+}
+@-moz-keyframes scaleAnimation { 
+  100% { -moz-transform: scale(1.1); } 
+}
+@-webkit-keyframes scaleAnimation { 
+  100% { -webkit-transform: scale(1.1); } 
+}
+@keyframes scaleAnimation { 
+  100% { 
+      -webkit-transform: scale(1.1); 
+      transform:scale(1.1); 
   } 
 }

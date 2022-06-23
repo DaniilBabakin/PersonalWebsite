@@ -6,6 +6,7 @@ import {
   useMotionValue,
 } from "framer-motion"
 import ProgressiveImage from "react-progressive-image"
+import { Link } from "react-router-dom"
 
 export const OpticaVzor = () => {
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }
@@ -41,12 +42,14 @@ export const OpticaVzor = () => {
       initial="initial"
       whileHover="hover"
       className="project__wrapper"
+      transition={{duration:5,...transition}}
     >
       {/*Сама "карточка" проекта*/}
-      <div className="project__card">
+      <motion.div className="project__card" initial={{y:-20}} whileInView={{y:0}} transition={{duration:5,...transition}}>
+      <Link to={`/projects/optica-vzor`}>
         <ProgressiveImage
-          src={require("../../../assets/OpticaVzor.png")}
-          placeholder={require("../../../assets/OpticaVzor.png")}
+          src={require("../../../assets/OpticaVzorPage/OpticaVzor.png")}
+          placeholder={require("../../../assets/OpticaVzorPage/OpticaVzor.png")}
         >
           {(src) => (
             <motion.img
@@ -56,7 +59,8 @@ export const OpticaVzor = () => {
             />
           )}
         </ProgressiveImage>
-      </div>
+        </Link>
+      </motion.div>
 
       {/*Четыре составляющие карточки проекта,при наведении на него(белые линии с каждой стороны,эффект зума) */}
       <motion.div

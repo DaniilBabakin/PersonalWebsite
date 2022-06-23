@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import "../styles/instagramClonePage.scss"
 import { Footer } from "../components/footer/footer"
 import Header from "../components/header/header"
-export default function InstagramClonePage() {
+export default function OpticaVzorPage() {
   const [headerActive, setActiveHeader] = useState(false)
   const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
   const [canScroll,setCanScroll] = useState(false)
@@ -49,8 +49,8 @@ export default function InstagramClonePage() {
         INSTAGRAM CLONE
       </motion.h1>
       <ProgressiveImage
-        src={require("../assets/ic3.jpg")}
-        placeholder={require("../assets/ic3.jpg")}
+        src={require("../assets/OpticaVzorPage/OpticaVzor.png")}
+        placeholder={require("../assets/OpticaVzorPage/OpticaVzor.png")}
       >
         {(src) => (
           <motion.img
@@ -75,15 +75,15 @@ export default function InstagramClonePage() {
           transition={{ delay: 0.7, duration: 2, ...transition }}
         >
           <img
-            src={require("../assets/instagramClonePage/1.png")}
+            src={require("../assets/OpticaVzorPage/OpticaVzorDesign.png")}
             className="instagram__point__img"
             alt="Login/Sign Up page"
           />
           <div className="instagram__point__circle"></div>
           <div className="instagram__point__titles">
-            <h3 className="about__project__title">Login/Sign Up page</h3>
+            <h3 className="about__project__title">Дизайн</h3>
             <span className="about__project__subtitle">
-              Реализовано на GoogleFirebase
+              Собственный дизайн с нуля
             </span>
           </div>
         </motion.div>
@@ -96,71 +96,20 @@ export default function InstagramClonePage() {
           transition={{ delay: 1, duration: 1, ...transition }}
         >
           <div className="instagram__point__titles">
-            <h3 className="about__project__title">Адаптивная верстка </h3>
+            <h3 className="about__project__title">Фильтрация </h3>
             <span className="about__project__subtitle">
-              Для лучших ощущений от приложения
+              Для максимального удобства
             </span>
           </div>
           <div className="instagram__point__circle"></div>
           <img
-            src={require("../assets/instagramClonePage/2.png")}
+            src={require("../assets/OpticaVzorPage/OpticaVzorFiltering.png")}
             className="instagram__point__img"
             alt="Adaptive"
           />
         </motion.div>
 
-        <motion.div
-          className="instagram__point"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1, duration: 1, ...transition }}
-        >
-          <img
-            src={require("../assets/instagramClonePage/3.png")}
-            className="instagram__point__img"
-            alt="Design"
-          />
-          <div className="instagram__point__circle"></div>
-          <div className="instagram__point__titles">
-            <h3 className="about__project__title">Дизайн, как в оригинале </h3>
-            <span className="about__project__subtitle">
-              Выполнен на Tailwind
-            </span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="instagram__point"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1, duration: 1, ...transition }}
-        >
-          <div
-            className="instagram__point__titles"
-            style={{ textAlign: "left" }}
-          >
-            <h3 className="about__project__title">Функционал </h3>
-            <span className="about__project__subtitle">
-              &#9829; Модальные окна
-            </span>
-            <br />
-            <span className="about__project__subtitle">
-              &#9824; Создание постов
-            </span>
-            <br />
-            <span className="about__project__subtitle">
-              &#9830; Изменение аватара
-            </span>
-          </div>
-          <div className="instagram__point__circle"></div>
-          <div className="instagram__point__titles">
-            <span className="about__project__subtitle">
-              И многое другое 🚀{" "}
-            </span>
-          </div>
-        </motion.div>
+        
       </div>
 
       <Footer />

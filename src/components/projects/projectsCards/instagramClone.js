@@ -1,9 +1,6 @@
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  useMotionValue,
+  motion
 } from "framer-motion"
 import ProgressiveImage from "react-progressive-image"
 import { Link } from "react-router-dom"

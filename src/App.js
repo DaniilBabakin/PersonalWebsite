@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from "react"
-import Header from "./components/header/header"
-import { BrowserRouter as Router, Routes, Route,useLocation } from "react-router-dom"
+import {Routes, Route,useLocation } from "react-router-dom"
 import * as ROUTES from "./constants/routes"
 import { AnimatePresence } from "framer-motion"
 
 const Main = lazy(() => import("./pages/main"))
 const InstagramClone = lazy(() => import("./pages/instagramClonePage"))
+const OpticaVzor = lazy(() => import("./pages/opticaVzorPage"))
 
 function App() {
   const location = useLocation();
@@ -15,6 +15,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path={ROUTES.MAIN} element={<Main />} />
           <Route path={ROUTES.INSTAGRAMCLONE} element={<InstagramClone />} />
+          <Route path={ROUTES.OPTICAVZOR} element={<OpticaVzor />} />
           
         </Routes>
         </AnimatePresence>
