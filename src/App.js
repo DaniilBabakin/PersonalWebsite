@@ -4,8 +4,10 @@ import * as ROUTES from "./constants/routes"
 import { AnimatePresence } from "framer-motion"
 
 const Main = lazy(() => import("./pages/main"))
+const AboutPage = lazy(() => import("./pages/aboutMe"))
 const InstagramClone = lazy(() => import("./pages/instagramClonePage"))
 const OpticaVzor = lazy(() => import("./pages/opticaVzorPage"))
+
 
 function App() {
   const location = useLocation();
@@ -14,6 +16,7 @@ function App() {
       <AnimatePresence initial={true} exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path={ROUTES.MAIN} element={<Main />} />
+          <Route path={ROUTES.ABOUT_ME} element={<AboutPage />} />
           <Route path={ROUTES.INSTAGRAMCLONE} element={<InstagramClone />} />
           <Route path={ROUTES.OPTICAVZOR} element={<OpticaVzor />} />
           

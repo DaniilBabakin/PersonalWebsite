@@ -26,18 +26,18 @@ $paddingRight:5vw;
 }
 .contact__images{
   position: relative;
-  width:10vw;
-  height:300px;
-
+  width:50vw;
+  height:400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__face{
-    position: absolute;
-    top:-20px;
-    left:0;
+    width:auto;
+    height:100%;
   }
   &__hand{
-    position: absolute;
-    top:-20px;
-    left:50px;
+    width:auto;
+    height:100%;
     transition: 0.3s ease all;
     &:hover{
       transform: scale(1.1) rotate(15deg) translateX(-20px) translateY(-10px);
@@ -217,4 +217,52 @@ $check-color: $brand-success;
   filter: saturate(0.2) opacity(0.5);
   -webkit-filter: saturate(0.2) opacity(0.5);
   cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1440px) {
+  .contact__container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact__form{
+    padding-right: 0;
+    padding-top: 70px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contact__form{
+    padding-right: 0;
+    padding-top: 70px;
+    width:40vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact__images{
+    height:350px;
+  }
+  .contact__form{
+    padding-top: 30px;
+    width:60vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .contact__images{
+    height:200px
+  }
+  .contact__form{
+    padding-top: 10px;
+  }
 }

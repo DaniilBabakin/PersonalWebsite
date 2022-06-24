@@ -40,6 +40,7 @@ export default function OpticaVzorPage() {
       ) : (
         <Header setActiveHeader={setActiveHeader} headerActive={headerActive} setCanScroll={setCanScroll}/>
       )}
+      <div className="github__div"><a href="https://github.com/DaniilBabakin/OpticaVzorSite" rel="noreferrer" target="_blank" className="github__link"><img src={require("../assets/Github.png")} alt="GitHub" className="github__icon"/><span className="github__span">Project on GitHub</span></a></div>
       <motion.h1
         className="single__project__title"
         initial={{ opacity: 0, scale: 1.1 }}
@@ -89,7 +90,7 @@ export default function OpticaVzorPage() {
         </motion.div>
 
         <motion.div
-          className="instagram__point"
+          className="instagram__point opticaVzor"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

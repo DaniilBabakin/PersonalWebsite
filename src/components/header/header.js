@@ -21,7 +21,7 @@ export default function Header({ setActiveHeader, headerActive,setCanScroll }) {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="header__close__button"
+            className="header__button header__close__button"
             fill="#ffffff"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -42,7 +42,7 @@ export default function Header({ setActiveHeader, headerActive,setCanScroll }) {
               <Link to={'/'} onClick={()=>setCanScroll(true)}><h3 className="navbar__link first">HOME</h3></Link>
             </MouseParallaxChild>
             <MouseParallaxChild factorX={0.2} className="skills__item__wrapper">
-              <h3 className="navbar__link">ABOUT ME</h3>
+      {/*<Link to={'/about-me'} onClick={()=>setCanScroll(true)}><h3 className="navbar__link">ABOUT ME</h3></Link>*/}
             </MouseParallaxChild>
           </MouseParallaxContainer>
         </motion.header>

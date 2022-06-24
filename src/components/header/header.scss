@@ -11,15 +11,7 @@
   align-items: center;
   backdrop-filter: blur(50px);
   &__close__button{
-    height: 90px;
-    width:90px;
-    z-index: 500;
-    position: fixed;
-    top:0;
-    right:0;
-    padding:3vh 3vw 0 0;
-    cursor: pointer;
-    transition: 0.3 ease all;
+    transform: rotate(0deg);
   }
 }
 .header_container {
@@ -41,9 +33,30 @@
     color:rgba(255, 255, 255, 0.562);
     transition: 0.2s ease all;
     cursor:crosshair;
-    &.first{margin-right: 10vw;}
+    &.first{
+     // margin-right: 10vw;
+    }
     &:hover{
       color:white;
     }
+  }
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  .navbar{
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    &__link.first{
+      margin-right: 0vw;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar__link{
+    font-size: 10vh;
   }
 }

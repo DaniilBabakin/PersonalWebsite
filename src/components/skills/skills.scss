@@ -97,6 +97,11 @@
     margin-right: 0;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .skills__container{
+    padding:5vh 0;
+  }
+}
 @media only screen and (max-width: 440px) {
   .skills__container{
     justify-content: space-evenly;
@@ -147,4 +152,13 @@
       -webkit-transform: scale(1.1); 
       transform:scale(1.1); 
   } 
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .skills__container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

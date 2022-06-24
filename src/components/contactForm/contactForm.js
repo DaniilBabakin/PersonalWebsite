@@ -36,15 +36,9 @@ export const ContactForm = () => {
       <div className="contact__container">
         <div className="contact__images">
           <img
-            src="/contactFormImages/face.png"
+            src="/contactFormImages/face1.png"
             className="contact__images__face"
-            alt="Лицо"
-          />
-          <img
-            src="/contactFormImages/hand.png"
-            className="contact__images__hand"
-            alt="Лайк"
-          />
+            alt="Лицо"/>
         </div>
         {isEmailSended == false ? (
           <form ref={form} onSubmit={sendEmail} className="contact__form">

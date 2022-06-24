@@ -2,18 +2,46 @@ import React from "react"
 import "../../styles/footer.scss"
 export const Footer = () => {
   return (
-    <footer className="instagram__footer">
-      <div className="instagram__footer__container">
-        <div className="instagram__footer__contact">
-          <span className="instagram__footer__suptitle">
-            Если выбирать качество
-          </span>
-          <a
-            href="mailto:rrdreaming@mail.ru"
-            className="instagram__footer__email"
-          >
+    <footer className="footer">
+      <div className="footer__container">
+        <div className="footer__contact">
+          <span className="footer__suptitle">Если выбирать качество</span>
+          <a href="mailto:rrdreaming@mail.ru" className="footer__email">
             rrdreaming@mail.ru
           </a>
+        </div>
+        <div className="footer__links">
+          <div className="github__div">
+            <a
+              href="https://github.com/DaniilBabakin"
+              rel="noreferrer"
+              target="_blank"
+              className="github__link"
+            >
+              <img
+                src={require("../../assets/Github.png")}
+                alt="GitHub"
+                className="github__icon"
+              />
+              <span className="github__span GitHub__Footer">Me on GitHub</span>
+            </a>
+          </div>
+
+          <div className="github__div telegram">
+            <a
+              href="https://t-do.ru/DaniilBabakin"
+              rel="noreferrer"
+              target="_blank"
+              className="github__link telegram"
+            >
+              <img
+                src={require("../../assets/tg.png")}
+                alt="GitHub"
+                className="github__icon telegram"
+              />
+              <span className="github__span GitHub__Footer telegram">My Telegram</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

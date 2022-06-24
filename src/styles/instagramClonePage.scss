@@ -60,6 +60,9 @@
   &:last-child{
     justify-content: space-evenly;
   }
+  &:last-child.opticaVzor{
+    justify-content: space-between;
+  }
 }
 .single__project{
   height: 100vh;

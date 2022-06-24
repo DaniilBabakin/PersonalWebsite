@@ -24,7 +24,7 @@ export default function InstagramClonePage() {
       {headerActive === false ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="header__button header__close__button"
+          className="header__button"
           fill="#ffffff"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -40,6 +40,7 @@ export default function InstagramClonePage() {
       ) : (
         <Header setActiveHeader={setActiveHeader} headerActive={headerActive} setCanScroll={setCanScroll}/>
       )}
+      <div className="github__div"><a href="https://github.com/DaniilBabakin/instagramClone" rel="noreferrer" target="_blank" className="github__link"><img src={require("../assets/Github.png")} alt="GitHub" className="github__icon"/><span className="github__span">Project on GitHub</span></a></div>
       <motion.h1
         className="single__project__title"
         initial={{ opacity: 0, scale: 1.1 }}
