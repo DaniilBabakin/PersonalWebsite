@@ -26,6 +26,7 @@
   justify-content: center;
   &.skills__container{
     min-height:10vh;
+    justify-content: center;
   }
   align-items: center;
   &__link{
@@ -41,7 +42,25 @@
     }
   }
 }
-
+.header__button{
+  position:fixed;
+  height: 90px;
+  width:90px;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  top:30px !important;
+  padding:3vh 3vw 0 0;
+  color:white;
+  cursor: pointer;
+  transition: 0.3 ease all;
+  transform: rotate(45deg);
+  &.header__close__button{
+    top:50px !important;
+    right:15px;
+    transform: rotate(90deg);
+  }
+}
 
 
 

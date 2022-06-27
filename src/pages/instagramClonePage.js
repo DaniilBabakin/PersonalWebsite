@@ -21,10 +21,10 @@ export default function InstagramClonePage() {
   }, [])
   return (
     <div className="single__project">
-      {headerActive === false ? (
+      {headerActive !== null && headerActive === false ? (
         <svg
-          xmlns="http://www.w3.org/2000/svg"
           className="header__button"
+          xmlns="http://www.w3.org/2000/svg"
           fill="#ffffff"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -40,7 +40,7 @@ export default function InstagramClonePage() {
       ) : (
         <Header setActiveHeader={setActiveHeader} headerActive={headerActive} setCanScroll={setCanScroll}/>
       )}
-      <div className="github__div"><a href="https://github.com/DaniilBabakin/instagramClone" rel="noreferrer" target="_blank" className="github__link"><img src={require("../assets/Github.png")} alt="GitHub" className="github__icon"/><span className="github__span">Project on GitHub</span></a></div>
+      <motion.div className="github__div" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:2.5,...transition}}><a href="https://github.com/DaniilBabakin/instagramClone" rel="noreferrer" target="_blank" className="github__link"><img src={require("../assets/Github.png")} alt="GitHub" className="github__icon"/><span className="github__span">Project on GitHub</span></a></motion.div>
       <motion.h1
         className="single__project__title"
         initial={{ opacity: 0, scale: 1.1 }}

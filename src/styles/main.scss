@@ -36,24 +36,6 @@ overflow: hidden;
     text-shadow: 3px 3px 20px rgb(21 21 21 / 85%), 0 -1px 0 #f3e840, 1px 0 0 #f3e840, -1px 0 0 #f3e840, 0 1px 0 #f3e840, -20px 0 20px rgb(21 21 21 / 75%), 2px 2px 0 #f3e840, 3px 3px 0 #f3e840, 4px 4px 20px rgb(21 21 21 / 65%), 5px 5px 0 #f3e840, 4px 4px 20px rgb(21 21 21 / 50%), 4px 4px 0 #f3e840;
   }
 }
-.header__button{
-  position:fixed;
-  height: 90px;
-  width:90px;
-  top: 0;
-  right: 0;
-  z-index: 500;
-  top:30px !important;
-  padding:3vh 3vw 0 0;
-  color:white;
-  cursor: pointer;
-  transition: 0.3 ease all;
-  transform: rotate(45deg);
-  &.header__close__button{
-    top:0px !important;
-  }
-}
-
 
 @media screen and (min-width: 2560px) {
   .main__text {
