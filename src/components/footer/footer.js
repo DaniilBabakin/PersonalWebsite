@@ -11,35 +11,35 @@ export const Footer = () => {
           </a>
         </div>
         <div className="footer__links">
-          <div className="github__div">
+          <div className="footer__link__div">
             <a
               href="https://github.com/DaniilBabakin"
               rel="noreferrer"
               target="_blank"
-              className="github__link"
+              className="footer__link"
             >
               <img
                 src={require("../../assets/Github.png")}
                 alt="GitHub"
-                className="github__icon"
+                className="footer__link__icon"
               />
-              <span className="github__span GitHub__Footer">Me on GitHub</span>
+              <span className="footer__link__span">Me on GitHub</span>
             </a>
           </div>
 
-          <div className="github__div telegram">
+          <div className="footer__link__div">
             <a
               href="https://t-do.ru/DaniilBabakin"
               rel="noreferrer"
               target="_blank"
-              className="github__link telegram"
+              className="footer__link"
             >
               <img
                 src={require("../../assets/tg.png")}
                 alt="GitHub"
-                className="github__icon telegram"
+                className="footer__link__icon"
               />
-              <span className="github__span GitHub__Footer telegram">My Telegram</span>
+              <span className="footer__link__span">My Telegram</span>
             </a>
           </div>
         </div>
