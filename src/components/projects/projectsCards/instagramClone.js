@@ -47,8 +47,8 @@ export const InstagramClone = () => {
       <motion.div className="project__card" initial={{y:-20}} whileInView={{y:0}} transition={{duration:5,...transition}}>
       <Link to={`/projects/instagram-clone`}>
         <ProgressiveImage
-          src={require("../../../assets/ic3.jpg")}
-          placeholder={require("../../../assets/ic3.jpg")}
+          src={require("../../../assets/instagram.jpg")}
+          placeholder={require("../../../assets/instagram.webp")}
         >
           {(src) => (
             <motion.img

@@ -50,8 +50,8 @@ export default function InstagramClonePage() {
         INSTAGRAM CLONE
       </motion.h1>
       <ProgressiveImage
-        src={require("../assets/ic3.jpg")}
-        placeholder={require("../assets/ic3.jpg")}
+        src={require("../assets/instagram.jpg")}
+        placeholder={require("../assets/instagram.webp")}
       >
         {(src) => (
           <motion.img

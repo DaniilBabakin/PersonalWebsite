@@ -51,10 +51,13 @@
   z-index: 500;
   top:30px !important;
   padding:3vh 3vw 0 0;
-  color:white;
+  color:rgb(196, 196, 196);
   cursor: pointer;
   transition: 0.3 ease all;
   transform: rotate(45deg);
+  &:hover{
+    color:white;
+  }
   &.header__close__button{
     top:50px !important;
     right:15px;
