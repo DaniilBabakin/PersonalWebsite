@@ -19,7 +19,6 @@ function App() {
           <Route path={ROUTES.ABOUT_ME} element={<AboutPage />} />
           <Route path={ROUTES.INSTAGRAMCLONE} element={<InstagramClone />} />
           <Route path={ROUTES.OPTICAVZOR} element={<OpticaVzor />} />
-          
         </Routes>
         </AnimatePresence>
       </Suspense>
