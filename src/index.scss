@@ -84,5 +84,17 @@ a{
   .github__link{
     padding:10px;
     min-width: 40px;
+    &:last-child{
+      padding-left: 40px;
+    }
+  }
+  .github__span{
+    left:-30px;
+    top:65px;
+    width:200px;
+    font-size: 15px;
+    &.link{
+      left:25px;
+    }
   }
 }
