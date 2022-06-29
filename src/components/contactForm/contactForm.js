@@ -27,7 +27,6 @@ export const ContactForm = () => {
         }
       )
   }
-  console.log(form.current)
   return (
     <div className="contact">
       <h2 className="projects__title" style={{ color: "white",paddingLeft:"3.5vw" }}>
@@ -40,7 +39,7 @@ export const ContactForm = () => {
             className="contact__images__face"
             alt="Лицо"/>
         </div>
-        {isEmailSended == false ? (
+        {isEmailSended === false ? (
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <input
               className="contact__form__field"

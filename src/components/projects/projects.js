@@ -7,7 +7,6 @@ import {
 import { useWindowSize } from "../../hooks/useWindowSize"
 import { InstagramClone } from "./projectsCards/instagramClone"
 import { OpticaVzor } from "./projectsCards/opticaVzor"
-import { useState } from "react"
 
 export default function Projects() {
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }
@@ -24,8 +23,6 @@ export default function Projects() {
   const opacity = useTransform(scrollY, [scrollStart, scrollAmount], [0, 1])
 
   const scrollContainer = document.querySelector(`.projects__container`);
-  const body = document.body
-  console.log(window.scrollY)
   scrollContainer && scrollContainer.addEventListener(`wheel`, (evt) => {
     evt.preventDefault();
     //check if you are at the end of horizontal scroll here
@@ -34,14 +31,12 @@ export default function Projects() {
       scrollContainer.scrollLeft &&
       Math.sign(evt.deltaY) === 1
     ) {
-      console.log("Конец")
       return window.scrollTo(0, window.scrollY + evt.deltaY/2)
     }
     if (
       scrollContainer.scrollLeft === 0 &&
       Math.sign(evt.deltaY) === -1
     ) {
-      console.log("Конец")
       return window.scrollTo(0, window.scrollY + evt.deltaY/2)
     }
   
