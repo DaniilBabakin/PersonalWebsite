@@ -1,0 +1,154 @@
+.skills{
+    height: 100%;
+    position:relative;
+    z-index:100;
+    width: 100vw;
+    color: #fff;
+    overflow: hidden;
+}
+.skills__container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  width:100vw;
+  position: relative;
+  z-index: 10;
+  color:white;
+}
+.skills__background{
+  background:url(https://images.unsplash.com/photo-1611502867268-9193c5c45f09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80);
+  background-position-y: 50%;
+  padding-top: 4vh;
+  transform: scale(1.5);
+  position: absolute;
+  filter: blur(4px) brightness(50%);
+  background-size: auto;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100%;
+  backface-visibility: hidden
+}
+
+
+.skills__item{
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+  }
+  -webkit-animation:spin 6s linear infinite;
+  -moz-animation:spin 6s linear infinite;
+  animation:spin 6s linear infinite;
+  width:200px;
+  height:200px;
+  margin-right: 20px;
+  &:hover{
+    .nodeJs{
+      display:inline
+    }
+    cursor: crosshair;
+  }
+  &.first {
+    -webkit-animation:spinReverse 8s linear infinite;
+    -moz-animation:spinReverse 8s linear infinite;
+    animation:spinReverse 8s linear infinite;
+    position: relative;
+  }
+  &.second{
+    animation:none;
+  }
+  &.third{
+    border-radius: 15px;
+    background-position: 300px 150px;
+    background-repeat: repeat-x;
+    animation: scaleAnimation 5s linear infinite alternate;
+    
+  }
+  &.fourth{
+    animation:none
+  }
+  &.fifth{
+    margin-right:0;
+  }
+}
+
+
+
+
+
+/*-------------------------------------МЕДИАЗАПРОСЫ-------------------------------------*/
+@media only screen and (min-width: 1440px) {
+  .skills__container{
+    justify-content: space-evenly;
+  }
+  .skills__item{
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .skills__container{
+    padding:5vh 0vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .skills__container{
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+  }
+  .skills__item{
+    margin-right: 0;
+    width:150px;
+    height:150px;
+  }
+}
+
+
+
+
+
+
+/*-------------------------------------АНИМАЦИИ-------------------------------------*/
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
+@-moz-keyframes spinReverse { 
+  100% { -moz-transform: rotate(-360deg); } 
+}
+@-webkit-keyframes spinReverse { 
+  100% { -webkit-transform: rotate(-360deg); } 
+}
+@keyframes spinReverse { 
+  100% { 
+      -webkit-transform: rotate(-360deg); 
+      transform:rotate(-360deg); 
+  } 
+}
+@-moz-keyframes scaleAnimation { 
+  100% { -moz-transform: scale(1.1); } 
+}
+@-webkit-keyframes scaleAnimation { 
+  100% { -webkit-transform: scale(1.1); } 
+}
+@keyframes scaleAnimation { 
+  100% { 
+      -webkit-transform: scale(1.1); 
+      transform:scale(1.1); 
+  } 
+}

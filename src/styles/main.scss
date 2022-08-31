@@ -1,0 +1,183 @@
+.main{
+background-color: #151515;
+min-height:100vh;
+position: relative;
+z-index:1;
+overflow: hidden;
+}
+
+.main__container{
+  padding:10vh 8vw 8vw 8vw;
+  min-height:100vh;
+  margin: 0 auto;
+  text-align: left;
+}
+.main__text {
+  text-transform:uppercase;
+  font-size: 7vw;
+  line-height: 135px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color:hsla(0,0%,100%,.25);
+  padding:0;
+  margin:0;
+  position: relative;
+}
+.text__white{
+  color:#ffffff;
+  transition: 0.4s ease all;
+  &:hover{
+    text-shadow: 3px 3px 20px rgb(21 21 21 / 85%), 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, -20px 0 20px rgb(21 21 21 / 75%), 2px 2px 0 #fff, 3px 3px 0 #fff, 4px 4px 20px rgb(21 21 21 / 65%), 5px 5px 0 #fff, 4px 4px 20px rgb(21 21 21 / 50%), 4px 4px 0 #fff;
+  }
+}
+.text__yellow{
+  color:#f3e840;
+  transition: 0.4s ease all;
+  &:hover{
+    text-shadow: 3px 3px 20px rgb(21 21 21 / 85%), 0 -1px 0 #f3e840, 1px 0 0 #f3e840, -1px 0 0 #f3e840, 0 1px 0 #f3e840, -20px 0 20px rgb(21 21 21 / 75%), 2px 2px 0 #f3e840, 3px 3px 0 #f3e840, 4px 4px 20px rgb(21 21 21 / 65%), 5px 5px 0 #f3e840, 4px 4px 20px rgb(21 21 21 / 50%), 4px 4px 0 #f3e840;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .main__text {
+    line-height: 160px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main__text {
+    line-height: 80px;
+  }
+  .header__button{
+    top:10px !important;
+    &.header__close__button{
+      top:0px !important;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__text {
+    line-height: 80px;
+    font-size: 10vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main{
+    min-height: 80vh;
+  }
+  .main__container{
+    min-height: 80vh;
+  }
+  .main__text {
+    line-height: 45px;
+  }
+  .header__button{
+    top:10px !important;
+    padding:0;
+    right:20px;
+    &.header__close__button{
+      top:0px !important;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------Для изменения бэкграунда при наведении----------------------------------------------------*/
+.span_me{
+  &::before{
+    content: '';
+    z-index: -10;
+    background-image: url('../../public/me.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: 0.4s ease all;
+  }
+  &:hover{
+    &::before{
+      opacity: 1;
+    }
+  }
+}
+.span_frontend{
+  &::before{
+    content: '';
+    z-index: -15;
+    background-image: url('../../public/frontend.jpg');
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: 0.4s ease all;
+  }
+  &:hover{
+    &::before{
+      opacity: 1;
+    }
+  }
+}
+.span_ui{
+  &::before{
+    content: '';
+    z-index: -100;
+    background-image: url('../../public/ui1.webp');
+    background-size: cover;
+    background-position: center;
+    
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: 0.4s ease all;
+  }
+  &:hover{
+    &::before{
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

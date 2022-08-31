@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding:0;
+  font-family: 'Raleway', sans-serif;
+}
+:root{
+  --app-height:100%;
+}
+html,body {
+  background-color: #151515;
+  overflow-x: visible;
+  overscroll-behavior-y: none;
+  margin: 0;
+  padding:0;
+  height:100vh;
+  height:var(--app-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  pointer-events:all;
+  &.no-scroll-hover {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+a{
+  text-decoration: none;
+}
+
+.github__div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  top:35%;
+  left:50%;
+  width:200px;
+  height:50px;
+  transform: translateX(-50%);
+  z-index: 300;
+  &.telegram{
+    left:70%;
+  }
+}
+.github__icon{
+  width:50px;
+  height: 50px;
+  color:white;
+}
+.github__link{
+  position: relative;
+  padding: 50px 50px;
+  color:white;
+  &:hover .github__span{
+    transform: translateY(40px);
+    opacity: 1;
+  }
+}
+.github__span{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  font-size: 20px;
+  left:0px;
+  top:65px;
+  width:200px;
+  color:rgb(255, 255, 255);
+  transition: 0.3s ease all;
+  &.link{
+    left:15px;
+  }
+  &.GitHub__Footer{
+    left:35px;
+  }
+  &:hover .github__icon{
+    background-color: red;
+  }
+}
+@media screen and (max-width: 425px) {
+  .github__link{
+    padding:10px;
+    min-width: 40px;
+    &:last-child{
+      padding-left: 40px;
+    }
+  }
+  .github__span{
+    left:-30px;
+    top:40px;
+    width:200px;
+    font-size: 15px;
+    &.link{
+      left:25px;
+    }
+  }
+}

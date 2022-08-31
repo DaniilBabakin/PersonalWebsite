@@ -1,0 +1,18 @@
+.about{
+  background-color: white;
+  &__container{
+    color:#151515;
+    display: flex;
+    max-width: 90vw;
+    margin:0 auto;
+  }
+  &__img{
+    width:40vw;
+    height: 40vw;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__text{
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,162 @@
+.projects{
+  background-color: #ffffff;
+  min-height:100vh;
+  position: relative;
+  z-index:150;
+  padding:8vh 0vw 8vh 3.5vw;
+
+  &__container{
+    width:200vw;
+    position: absolute;
+    top:25vh;
+    left:5vw;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+  }
+
+  &__title{
+    color:black;
+    font-size: 7vw;
+    margin:0 0 20px 4vw;
+    padding:0;
+  }
+}
+
+
+//------------------------------Отдельные карточки для каждого проекта--------------------------------------
+.project__wrapper{
+  position: relative;
+  min-width: 70vw;
+  height:70vh;
+  margin-left: 30px;
+  transition: 0.5s ease all;
+  filter:grayscale(100);
+  &:first-child{
+    margin:0;
+  }
+  &:hover{
+    filter:grayscale(0) contrast(105%) 
+  }
+}
+.wrapper__line{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom:0;
+  width:100%;
+  height:2rem;
+  background-color: rgb(255, 255, 255);
+  &.top{
+    bottom:auto;
+  }
+  &.right{
+    left:auto;
+    width:2rem;
+    height:100%;
+  }
+  &.bottom{
+    top:auto;
+  }
+  &.left{
+    right:auto;
+    width:2rem;
+    height:100%;
+  }
+}
+
+
+.project__card{
+  position: relative;
+  z-index: 0;
+  height:100%;
+  &__image{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__text{
+    position: absolute;
+    font-weight: 500;
+    z-index: 2;
+    bottom:-5px;
+    left:5%;
+    width:90%;
+    font-size:25px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__stack{
+      font-size:18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projects{
+    padding-bottom: 0;
+  }
+  
+}
+@media only screen and (max-width: 425px) {
+  .projects{
+    &__container{
+      flex-direction: column;
+      scroll-snap-type: none;
+    }
+  }
+  .project{
+    &__wrapper{
+      margin-left:0;
+      padding-bottom: 30px;
+      height:50vh;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .projects__container  {
+    width:90vw;
+    min-height: auto;
+    position: relative;
+    top:0;
+    left:0;
+    gap:10px;
+    flex-direction: column;
+    overflow-x: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .project__wrapper{
+    margin-left:0 !important;
+    height:40vh;
+    width:90vw;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .projects{
+    width:100vw;
+    min-height: auto;
+  }
+  .projects__container  {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left:0;
+    gap:5px;
+    top:0;
+    left:0;
+  }
+  .project__wrapper{
+    margin-left:0 !important;
+    height:70vh;
+    width:90vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects__title  {
+    font-size: 10vw;
+  }
+}
