@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import "../styles/instagramClonePage.scss"
 import { Footer } from "../components/footer/footer"
 import Header from "../components/header/header"
-import ProgressiveImage from "../components/progressiveImage"
+
 export default function InstagramClonePage() {
   const [headerActive, setActiveHeader] = useState(false)
   const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }
@@ -17,10 +17,15 @@ export default function InstagramClonePage() {
     }
   }, [canScroll])
   useEffect(() => {
-    window.scrollTo(0, 0)
+    document.body.scrollTo({ top: 0 })
   }, [])
   return (
-    <div className="single__project">
+    <motion.div 
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      transition={{duration: 1.2}}
+      className="single__project"
+    >
       {headerActive !== null && headerActive === false ? (
         <svg
           className="header__button"
@@ -103,7 +108,7 @@ export default function InstagramClonePage() {
       />
 
       {/*--------------------Контейнер с описанием проекта-------------------- */}
-      <div className="about__project">
+      {/* <div className="about__project">
         <motion.div
           className="instagram__point"
           initial={{ opacity: 0, y: 30 }}
@@ -198,9 +203,9 @@ export default function InstagramClonePage() {
             </span>
           </div>
         </motion.div>
-      </div>
+      </div> */}
 
       <Footer />
-    </div>
+    </motion.div>
   )
 }

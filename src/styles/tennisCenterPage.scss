@@ -1,11 +1,17 @@
 .about__project{
-  padding:0 20px;
+  padding:5vh 20px;
   background-color:#ffffff;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  & .feature-text{
+    font-size: 96px;
+  }
+  & .feature-image{
+    width: 100vw;
+    height: auto;
+  }
   &__title{
     font-size: 2.5vw;
     font-weight: 500;
@@ -136,6 +142,12 @@
     }
   }
   .about__project {
+    padding-top: 5vh;
+    padding-bottom: 0vh;
+    & .feature-text{
+      font-size: 60px;
+      margin: 5vh 0;
+    }
     &:after{
       display:none;
     }
@@ -174,6 +186,9 @@
 }
 @media only screen and (max-width: 425px) {
   .about__project{
+    & .feature-text{
+      font-size: 40px;
+    }
     &__title{
       font-size: 7vw;
     }

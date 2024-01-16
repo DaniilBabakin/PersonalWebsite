@@ -5,9 +5,9 @@ export const Footer = () => {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__contact">
-          <span className="footer__suptitle">Если выбирать качество</span>
-          <a href="mailto:rrdreaming@mail.ru" className="footer__email">
-            rrdreaming@mail.ru
+          <span className="footer__suptitle">Next level</span>
+          <a href="mailto:rrdreaming0224@gmail.com" className="footer__email">
+            rrdreaming0224@gmail.com
           </a>
         </div>
         <div className="footer__links">

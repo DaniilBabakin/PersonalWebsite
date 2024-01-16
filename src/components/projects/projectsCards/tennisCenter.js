@@ -1,10 +1,8 @@
 import React from "react"
-import {
-  motion,
-} from "framer-motion"
+import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
-export const OpticaVzor = () => {
+export const TennisCenter = () => {
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }
   //Transition для вспомогательных линий(белые линии при Hover)
   const topBottomLine = {
@@ -32,6 +30,7 @@ export const OpticaVzor = () => {
       opacity: 1,
     },
   }
+
   return (
     /*Этот Div - Wrapper,нам он нужен,чтобы правильно работал Hover(без него из-за изменения scale будут баги) */
     <motion.div
@@ -45,10 +44,10 @@ export const OpticaVzor = () => {
         className="project__card"
         transition={{ duration: 5, ...transition }}
       >
-        <Link to={`/projects/optica-vzor`}>
+        <Link to={`/projects/tennis-center`}>
           <motion.img
-            src={require("../../../assets/OpticaVzorPage/OpticaVzor.png")}
-            alt="OpticaVzor"
+            src={require("../../../assets/tennisCenterPage/mockup.png")}
+            alt="aboba"
             className="project__card__image"
           />
         </Link>
@@ -82,8 +81,10 @@ export const OpticaVzor = () => {
         variants={stackText}
         transition={transition}
       >
-        <span>OPTICA VZOR</span>
-        <span className="project__card__text__stack">React/Scss</span>
+        <span>TENNIS CENTER</span>
+        <span className="project__card__text__stack">
+          Complex animations / Unique atmosphere
+        </span>
       </motion.div>
     </motion.div> /*Конец Wrapper */
   )

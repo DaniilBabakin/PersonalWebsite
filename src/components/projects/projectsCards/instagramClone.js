@@ -43,8 +43,6 @@ export const InstagramClone = () => {
       {/*Сама "карточка" проекта*/}
       <motion.div
         className="project__card"
-        initial={{ y: -20 }}
-        whileInView={{ y: 0 }}
         transition={{ duration: 5, ...transition }}
       >
         <Link to={`/projects/instagram-clone`}>

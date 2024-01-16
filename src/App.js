@@ -7,6 +7,7 @@ const Main = lazy(() => import("./pages/main"))
 const AboutPage = lazy(() => import("./pages/aboutMe"))
 const InstagramClone = lazy(() => import("./pages/instagramClonePage"))
 const OpticaVzor = lazy(() => import("./pages/opticaVzorPage"))
+const TennisCenter = lazy(() => import("./pages/tennisCenterPage"))
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path={ROUTES.ABOUT_ME} element={<AboutPage />} />
           <Route path={ROUTES.INSTAGRAMCLONE} element={<InstagramClone />} />
           <Route path={ROUTES.OPTICAVZOR} element={<OpticaVzor />} />
+          <Route path={ROUTES.TENNISCENTER} element={<TennisCenter />} />
         </Routes>
       </AnimatePresence>
     </Suspense>
